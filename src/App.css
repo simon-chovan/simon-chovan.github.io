@@ -1,0 +1,90 @@
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.main-header {
+  height: 5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.default-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.default-link:hover {
+  text-decoration: underline;
+}
+
+.centered-column {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.side-margins p {
+  text-align: justify;
+  width: 65%;
+}
+
+.centered-column h2 {
+  font-size: 2em; 
+}
+
+/* Atlas grid */
+
+.atlas-grid {
+  display: flex;
+  /* margin-left: -1em; gutter size offset */
+  margin-top: 3em;
+  width: 70%;
+  height: 100%;
+  justify-content: center;
+  align-self: center;
+}
+
+.atlas-grid_column {
+  padding-left: 1em; /*gutter size*/
+  background-clip: padding-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TODO: Might need tweaks to work with components */
+
+.atlas-grid_column > img { 
+  max-width: 100%;
+  margin-bottom: 1em;
+  border: 3px solid red;
+}
+
+.video-item { 
+  max-width: 100%;
+  margin-bottom: 1em;
+  border: 3px solid red;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Testing item, remove before production */
+.atlas-grid_column > div { 
+  max-width: 100%;
+  width: 100%;
+  color: transparent;
+  background: transparent;
+  margin-bottom: 1em;
+}
