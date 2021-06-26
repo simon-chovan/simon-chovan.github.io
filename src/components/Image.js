@@ -1,7 +1,34 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Image = ({ path, title }) => (
-    <img src={path} alt={title} style={{ width: "100%", height: "auto", margin: "4em" }}/>
-);
+class Image extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    state = {
+        img: this.props.path
+    }
+
+    render() {
+        return (
+            <img 
+                src={this.state.img} 
+                alt={this.props.title} 
+                style={{ width: "100%", height: "auto"}} 
+                onMouseEnter = {() => {
+                    this.setState({
+                        img: this.props.hover
+                    })
+                }}
+                onMouseOut = {() => {
+                    this.setState({
+                        img: this.props.path
+                    })
+                }}
+            />
+        )
+    }
+
+}
 
 export default Image;

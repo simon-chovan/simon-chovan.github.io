@@ -27,11 +27,6 @@ class Header extends Component {
             onClick={() => this.click("red", "white")}>
               o projekte
           </NavLink>
-          <NavLink className="default-link" 
-            to="/spotlight"
-            onClick={() => this.click("blue", "white")}>
-              spotlight
-          </NavLink>
       </nav>
     );
   }
