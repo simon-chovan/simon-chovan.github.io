@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Masonry from 'react-masonry-css'
+import Modal from 'react-modal';
 
 import Image from './Image'
 import Video from './Video'
@@ -10,11 +11,10 @@ import { atlas_items, images } from '../imports.js';
 
 import video from "../videos/cista4.mp4"
 
-
 class Atlas extends Component {
     constructor(props) {
         super(props);
-    };
+    }
 
     breakpointColumnsObj = {
         default: 3,
@@ -37,14 +37,10 @@ class Atlas extends Component {
         if (item.type === 'image') {
             return [
                 spacing_div,
-                <NavLink
-                    to="/spotlight"
-                >
-                    <Image
-                        key={item.id} title={item.title}
-                        path={item.src} hover={item.hover}
-                    />
-                </NavLink>
+                <Image
+                    key={item.id} title={item.title}
+                    path={item.src} hover={item.hover}
+                />
             ]
         }
         else if (item.type === 'video') {

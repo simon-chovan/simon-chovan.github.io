@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 
 import Spotlight from "./Spotlight";
 
+import logo from "../images/logo.svg";
+
 
 class Header extends Component {
   constructor(props) {
@@ -17,10 +19,10 @@ class Header extends Component {
   render() {
     return (
       <nav className="main-header">
-          <NavLink className="default-link" 
+          <NavLink 
             to="/atlas" 
             onClick={() => this.click("white", "red")}>
-              atlas kolapsu
+              <img src={logo} alt="atlas kolapsu" width="100%" />
           </NavLink>
           <NavLink className="default-link" 
             to="/info"

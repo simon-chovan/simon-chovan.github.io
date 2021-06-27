@@ -29,10 +29,23 @@
 //     render() {
 //         return (
 //             <div className="centered-column side-margins"  >
-//                 {this.props.contentType === "image"
-//                     ? <Image path={item.src} title={item.title} key={item.id} hover={item.hover} />
-//                     : <Video path={item.src} title={item.title} key={item.id} hover={item.hover} />
-//                 }
+//                 <Image 
+//                         path={this.props.clicked_item.src} 
+//                         title={this.props.clicked_item.title} 
+//                         key={this.props.clicked_item.id} 
+//                         hover={this.props.clicked_item.hover} />
+//                 {/* {this.props.contentType === "image"
+//                     ? <Image 
+//                         path={this.props.clicked_item.src} 
+//                         title={this.props.clicked_item.title} 
+//                         key={this.props.clicked_item.id} 
+//                         hover={this.props.clicked_item.hover} />
+//                     : <Video 
+//                         path={this.props.clicked_item.src} 
+//                         title={this.props.clicked_item.title} 
+//                         key={this.props.clicked_item.id} 
+//                         hover={this.props.clicked_item.hover} />
+//                 } */}
 //             </div>
 //         );
 //     }

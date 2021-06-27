@@ -6,18 +6,9 @@ import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import Header from "./components/Header";
 import Atlas from "./components/Atlas";
 import Info from "./components/Info";
-import Spotlight from "./components/Spotlight";
 import NotFound from "./components/NotFound";
 
 class App extends Component {
-  // // Prevent page reload, clear input, set URL and push history on submit
-  // handleSubmit = (e, history, searchInput) => {
-  //   e.preventDefault();
-  //   e.currentTarget.reset();
-  //   let url = `/search/${searchInput}`;
-  //   history.push(url);
-  // };
-
   constructor(props) {
     super(props);
     this.state = { backgroundColor: "white", textColor: "red" };
@@ -55,7 +46,6 @@ class App extends Component {
               />
               <Route path="/atlas" render={props => <Atlas />} />
               <Route path="/info" render={props => <Info appChangeColor={this.changeColor} />} />
-              <Route path="/spotlight" render={props => <Spotlight appChangeColor={this.changeColor} />} />
               <Route component={NotFound} />
             </Switch>
           </div>

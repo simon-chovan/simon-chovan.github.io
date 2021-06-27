@@ -64,7 +64,7 @@
 
 /* TODO: Might need tweaks to work with components */
 
-.atlas-grid_column > img { 
+.atlas-grid_column > div > a > img { 
   max-width: 100%;
   margin-bottom: 1em;
   border: 3px solid red;
@@ -88,3 +88,4 @@
   background: transparent;
   margin-bottom: 1em;
 }
+
